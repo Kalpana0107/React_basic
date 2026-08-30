@@ -15,7 +15,7 @@ const handleSubmit = (e)=>{
         title :title.trim(),
         amount :parseFloat(amount),
         category,
-        date: new Date.toISOString().split('T')[0],
+        date: new Date().toISOString().split('T')[0],
     };
     onAdd(newExpense);
     setTitle('');
@@ -24,14 +24,14 @@ const handleSubmit = (e)=>{
 }
     return(
         <form onSubmit={handleSubmit} className="expense-form">
-            <input type="text" placeholder="Expense-Type" value={title} onChange={(e)=>setTitle(e.target.value)}/>
+            <input type="text" placeholder="Expense-spent-title" value={title} onChange={(e)=>setTitle(e.target.value)}/>
             <input type="number" placeholder="Amount" value={amount} onChange={(e)=>setAmount(e.target.value)}/>
             <select value={category} onChange={(e)=>setCategory(e.target.value)}>
-                <option value={Food}>Food</option>
-                <option value={Travel}>Travel</option>
-                <option value={Shopping}>Shopping</option>
-                <option value={Bills}>Bills</option>
-                <option value={Others}>Others</option>
+                <option value="Food">Food</option>
+                <option value="Travel">Travel</option>
+                <option value="Shopping">Shopping</option>
+                <option value="Bills">Bills</option>
+                <option value="Others">Others</option>
             </select>
             <button type="submit">Add Expense</button>
         </form>

@@ -2,6 +2,9 @@ const CATEGORIES = ['All', 'Food', 'Travel', 'Shopping', 'Bills', 'Other'];
  
 function CategoryFilter({ selected, onChange }) {
   return (
+    <div>
+ <label htmlFor="category-filter">Filter by category:</label>
+   
     <select
       className="category-filter"
       value={selected}
@@ -13,6 +16,7 @@ function CategoryFilter({ selected, onChange }) {
         </option>
       ))}
     </select>
+     </div>
   );
 }
  
