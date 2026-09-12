@@ -16,7 +16,6 @@ function Hello(){
    <h1>Hello</h1>
     </>
   )
-
 }
 const App = () => {
     const COMPANY = ["GEEKS", "FOR", "GEEKS"];
